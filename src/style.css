@@ -1,3 +1,14 @@
 * {
-  font-family: calibri;
+  font-family: calibri, arial;
+  border: solid 1px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  cursor: pointer;
+  user-select: none;
 }

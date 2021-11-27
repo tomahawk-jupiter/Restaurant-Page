@@ -1,5 +1,7 @@
 import './style.css';
 import loadHomepage from './homepage.js';
+import loadMenuPage from './menu.js';
+import loadBookingsPage from './bookings.js';
 
 console.log('index.js loaded!');
 // Initial page
