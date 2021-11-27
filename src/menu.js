@@ -17,7 +17,7 @@ export default function loadMenuPage() {
   menuContainer.appendChild(wineDiv);
 
   pastaDiv.innerHTML = `
-  <h2>Menu</h2>
+  <h1>Menu</h1>
 
   <div class="menu-card">
     <img

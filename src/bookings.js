@@ -9,7 +9,7 @@ export default function loadBookingsPage() {
 
   bookingDetails.innerHTML = `
   <div class="bookings-container">
-    <h2>Booking Details</h2>
+    <h1>Booking Details</h1>
     <h3>Opening Times</h3>
     <p>Mon: 12pm - 11pm</p>
     <p>Tue: 12pm - 11pm</p>

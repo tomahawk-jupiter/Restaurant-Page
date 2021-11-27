@@ -4,15 +4,16 @@ export default function loadHomepage() {
   const content = document.querySelector('.content');
   content.replaceChildren();
 
+  const image = document.createElement('img');
+  content.appendChild(image);
+
   const homepageContainer = document.createElement('div');
-  content.appendChild(homepageContainer);
   homepageContainer.setAttribute('class', 'homepage-container');
 
-  const image = document.createElement('img');
   const header = document.createElement('h1');
   const paragraph = document.createElement('p');
 
-  homepageContainer.appendChild(image);
+  content.appendChild(homepageContainer);
   homepageContainer.appendChild(header);
   homepageContainer.appendChild(paragraph);
 
