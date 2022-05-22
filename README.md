@@ -14,7 +14,7 @@ A mock restaurant website made by rendering pages dynamically with JavaScript mo
 - [Configure Webpack](#configure-webpack)
 - [Create Scripts](#build-script)
 - [Bundle CSS](#include-css)
-- [Cool CSS Underline Trick](#cool-css-underline-trick-with-:after)
+- [Cool CSS Underline Trick](#cool-css-underline-trick-with-after)
 - [Github Pages Host](#github-pages-host)
 
 ## Overview
