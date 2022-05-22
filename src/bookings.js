@@ -1,25 +1,64 @@
+const openingTimes = [
+  {
+    day: "Mon",
+    time: "12pm - 11pm",
+  },
+  {
+    day: "Tue",
+    time: "12pm - 11pm",
+  },
+  {
+    day: "Wed",
+    time: "12pm - 11pm",
+  },
+  {
+    day: "Thu",
+    time: "12pm - 11pm",
+  },
+  {
+    day: "Fri",
+    time: "12pm - 12pm",
+  },
+  {
+    day: "Sat",
+    time: "12pm - 12pm",
+  },
+  {
+    day: "Sun",
+    time: "12pm - 11pm",
+  },
+];
+
 export default function loadBookingsPage() {
-  console.log('Bookings loaded!');
+  const content = document.querySelector(".content");
+  content.replaceChildren(); // Clear the previous content
 
-  const content = document.querySelector('.content');
-  content.replaceChildren();
+  const bookingsContainer = document.createElement("div");
+  bookingsContainer.setAttribute("class", "bookings-container");
+  content.appendChild(bookingsContainer);
 
-  const bookingDetails = document.createElement('div');
-  content.appendChild(bookingDetails);
+  const bookingHeader = document.createElement("h1");
+  bookingHeader.innerText = "Booking Details";
+  bookingsContainer.appendChild(bookingHeader);
 
-  bookingDetails.innerHTML = `
-  <div class="bookings-container">
-    <h1>Booking Details</h1>
-    <h3>Opening Times</h3>
-    <p>Mon: 12pm - 11pm</p>
-    <p>Tue: 12pm - 11pm</p>
-    <p>Wed: 12pm - 11pm</p>
-    <p>Thu: 12pm - 11pm</p>
-    <p>Fri: 12pm - 12pm</p>
-    <p>Sat: 12pm - 12am</p>
-    <p>Sun: 12pm - 11pm</p>
-    <h3>Contact</h3>
-    <p>Tel: 12345 12345</p>
+  const openTimesHeader = document.createElement("h3");
+  openTimesHeader.innerText = "Opening Times";
+  bookingsContainer.appendChild(openTimesHeader);
 
-  <div>`;
+  // Loop opening times array and create DOM elements for each //
+  openingTimes.forEach((eachDay) => {
+    const pTag = document.createElement("p");
+    pTag.innerText = `${eachDay.day}: ${eachDay.time}`;
+    bookingsContainer.appendChild(pTag);
+  });
+
+  const contactHeader = document.createElement("h3");
+  contactHeader.innerText = "Contact";
+
+  bookingsContainer.appendChild(contactHeader);
+
+  const pTel = document.createElement("p");
+  pTel.innerText = "Tel: 12345 12345";
+
+  bookingsContainer.appendChild(pTel);
 }
